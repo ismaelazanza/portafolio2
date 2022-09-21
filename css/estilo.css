@@ -1,0 +1,244 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+  min-height: 100vh;
+  font-family: 'Karla', sans-serif;
+  background-image: url(../images/bg-desktop.png);
+  background-color: hsl(229, 57%, 11%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 100rem;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2 , h3, h4, p, a{
+    margin: 0;
+    padding: 0;
+}
+
+/* EMPIEZA CUADRO IZQUIERDO */
+
+.flexbox-general{
+    display: flex;
+}
+
+.logo-nav {
+    width: 30%;
+    background-color: hsl(228, 56%, 26%);
+    padding: 4rem 7rem 4rem 2rem;
+    border-radius: 1rem 5rem 1rem 1rem;
+}
+
+.info-descargas{
+    margin-top: 1rem;
+}
+.info-descargas img{
+    padding: .8rem;
+    margin-top: 1rem;
+    margin-right: .8rem;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: .8rem;
+}
+
+.bar-general{
+    min-width: 50rem;
+}
+
+.info-descargas{
+    display: flex;
+}
+
+/* EMPIEZA CUADRO DERECHO */
+
+.contenedor-bar{
+    margin: 0 2rem;
+}
+
+.contenedor-bar p{
+    color: hsl(243, 100%, 93%);
+    font-size: 1.2rem;
+}
+
+.contenedor-bar .store{
+    padding-bottom: 1rem;
+}
+
+.bar-espacio{
+    font-weight: 800;
+}
+
+.bar-general{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 1.5rem 1.5rem 2rem 2rem;
+    margin-left: 1.8rem;
+    max-height: 12rem;
+    position: relative;
+    top: 3.4rem;
+}
+
+.flexbox-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bar-progreso{
+    height: 1.2rem;
+    background-color: hsl(229, 57%, 11%);
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.bar-progreso-color{
+    height: 1.1rem;
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    width: 70%;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 5.4rem;
+    animation: fillcolor 2s forwards;
+}
+
+        .circle{
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: aliceblue;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 5.2rem;
+            left: 35.7rem;
+            animation: position-circle 2s forwards;
+        }
+
+.bar-parte-abajo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.cajaprecio{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0%;
+    bottom: 9.5rem;
+    background-color: aliceblue;
+    padding: 1rem 2rem;
+    border-radius: 1rem 1rem 0 1rem;
+}
+
+.cajaprecio-responsive{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 1rem 2rem;
+    display: none;
+}
+
+.cajaprecio h2,
+.cajaprecio-responsive h2{
+    font-size: 3rem;
+}
+
+.cajaprecio p,
+.cajaprecio-responsive p{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(91, 91, 91);
+    margin-left: 1rem;
+}
+
+.bar-corto{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: aliceblue;
+    position: absolute;
+    right: 0%;
+    bottom: 8.5rem;
+    border-radius: 0 0 0 4rem;
+}
+
+
+@keyframes fillcolor{
+    0% {width: 0;}
+    100% {width: 70%;}
+}
+
+@keyframes position-circle{
+    0% {left: 0;}
+    100% {left: 73%;}
+}
+
+@media (max-width: 750px) {
+    body{
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .flexbox-general{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-nav {
+        width: 100%;
+    }
+    .bar-general{
+        margin: 3rem 0 0 0;
+        min-width: 30rem;
+        min-height: 16rem;
+        top: 0;
+    }
+    .bar-progreso-color{
+        bottom: 7.4rem;
+    } 
+
+    .cajaprecio{
+        display: none;
+    }
+    .bar-corto {
+        display: none;
+    }
+    .cajaprecio-responsive{
+        display: flex;
+        background-color: aliceblue;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        width: 15rem;
+        position: relative;
+        bottom: 2rem;
+        left: 5rem;
+    }
+    .circle{
+        bottom: 7.2rem;
+        left: 35.7rem;
+    }
+  }
